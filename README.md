@@ -2,7 +2,7 @@
  Projeto final da Academia java Atos UFN. 
 # Resumo:
  Aplicação de um sistema de suporte TI para o ambiente interno de uma empresa. 
- O backend será feito com java com Api's e o DB em Mysql. O frontend será com Angular 9, Bootstrap, JS e PrimeFace.
+ O backend será feito com java com Api's e o DB em Mysql. O frontend será com Angular 9, Bootstrap, JS e PrimeFaces.
 
 # FinalProjectAtosUFN
  Final project of Java Atos UFN class.
