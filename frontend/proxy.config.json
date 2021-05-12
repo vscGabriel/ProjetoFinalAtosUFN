@@ -1,0 +1,10 @@
+{
+  " / api " : {
+    " target " : " https://localhost:8080/cliente" ,
+    " seguro " : true ,
+    " changeOrigin " : true ,
+    " pathRewrite " : {
+      " ^ / api " : " "
+    }
+  }
+}
