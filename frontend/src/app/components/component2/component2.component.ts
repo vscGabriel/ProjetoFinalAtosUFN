@@ -23,6 +23,7 @@ export class Component2Component implements OnInit {
 
   ngOnInit(): void {
   }
+  
   adicionaUsuario(){
     if(this.usuario == null || this.email == null || this.senha==null){
       this.cadastradoNoBanco = false

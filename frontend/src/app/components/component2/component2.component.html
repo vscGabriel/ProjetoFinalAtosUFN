@@ -1,4 +1,4 @@
-<div class="sectionCadastro">
+<!-- <div class="sectionCadastro">
     <div class="divCadastro">
         <div class="p-field p-grid">
             <label for="usuario" class="p-col-fixed" style="width:100px">Nome</label>
@@ -22,7 +22,31 @@
         </div>
 
         <br>
-        <button pButton type="button" label="CADASTRAR" (click)="adicionaUsuario()"></button>
+        
        
+       
+    </div>
+</div>
+ -->
+<div class="sectionCadastro">
+    <div class="divCadastro ">
+        <h2>Cadastre-se</h2>
+        <form class="example-form example">
+            <mat-form-field class="example">
+                <mat-label for="usuario">Nome</mat-label>
+                <input pInputText id="usario" type="text" matInput  [(ngModel)]="usuario" name="usuario">
+            </mat-form-field>
+
+            <mat-form-field class="example">
+                <mat-label for="email">E-mail</mat-label>
+                <input pInputText id="email" type="text" matInput   [(ngModel)]="email" name="email" >
+            </mat-form-field>
+
+            <mat-form-field class="example">
+                <mat-label for="senha">Senha</mat-label>
+                <input pInputText id="senha" type="password" matInput   [(ngModel)]="senha" name="senha">
+            </mat-form-field>
+        </form> 
+        <button pButton mat-raised-button type="button" label="CADASTRAR" (click)="adicionaUsuario()" class="mat-elevation-z4"></button>
     </div>
 </div>

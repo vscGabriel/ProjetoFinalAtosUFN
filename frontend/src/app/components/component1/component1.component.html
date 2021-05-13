@@ -1,4 +1,4 @@
-<div class="sectionLogin">
+<!-- <div class="sectionLogin">
     <div class="divLogin">
         <div class="p-field p-grid">
             <label for="email" class="p-col-fixed" style="width:100px">Email</label>
@@ -15,6 +15,26 @@
         </div>
         <br>
         <button pButton type="button" label="LOGAR" (click)="validaLogin()"></button> 
-        <button pButton routerlink="component2" type="button" label="CADASTRO"></button><br><br>
+        <button pButton  type="button" label="Cadastro" routerLink="/Cadastro"></button><br><br>
+  </div>
+</div> -->
+
+<div class="sectionLogin">
+    <div class="divLogin ">
+        <form class="example-form example">
+           <mat-form-field class="example">
+                <mat-label>E-mail</mat-label>
+                <input matInput pInputText [(ngModel)]="email" name="email" >
+            </mat-form-field>
+
+            <mat-form-field class="example">
+                <mat-label>Senha</mat-label>
+                <input type="password" matInput pInputText [(ngModel)]="senha" name="senha">
+            </mat-form-field>
+        </form>
+    <div class="example-label">
+        <button pButton mat-raised-button type="button" label="Entrar" class="example-label mat-elevation-z4" (click)="validaLogin()"></button> 
+        <button pButton mat-raised-button  type="button" label="Cadastro" class="example-label mat-elevation-z4" routerLink="/Cadastro"></button>
+    </div>
     </div>
 </div>

@@ -1,0 +1,57 @@
+/* button{
+    padding: 10px;
+    margin-right: 5px;
+    margin-top: 5px;
+    background-color: rgb(0, 140, 255);
+    font: 20px bold;
+    border-radius: 5px;
+    border: 2px rgb(0, 140, 255);
+    cursor:pointer;
+} 
+
+button:hover{
+    font-size: 25px;
+    border: 2px rgb(0, 140, 255);    
+    border-radius: 10px;
+}
+*/
+.sectionCadastro{
+    margin: 0 auto;
+    height: 100%;
+    width:  100%;
+    background-color:rgb(42, 42, 42);
+    color: rgb(165, 16, 165);
+    border:2px solid black;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+
+}
+.divCadastro{
+    width: 50%;
+    font-size: 30px;
+    text-align: center;
+    vertical-align: middle;  
+} 
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    
+  }
+  
+  .example {
+    width: 100%;
+  }
+
+  .example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  

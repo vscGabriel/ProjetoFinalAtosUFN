@@ -10,13 +10,18 @@ import { HttpClientModule } from '@angular/common/http';
 import {InputTextModule} from 'primeng/inputtext';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import {ButtonModule} from 'primeng/button';
+import {RippleModule} from 'primeng/ripple';
 import { Component2Component } from './components/component2/component2.component';
+import { Component3Component } from './components/component3/component3.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
     AppComponent,
     Component1Component,
-    Component2Component
+    Component2Component,
+    Component3Component
   ],
   imports: [
     BrowserModule,
@@ -26,7 +31,12 @@ import { Component2Component } from './components/component2/component2.componen
     HttpClientModule,
     InputTextModule,
     InputTextareaModule,
-    ButtonModule
+    ButtonModule,
+    RippleModule,
+    MatInputModule,
+    MatButtonModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

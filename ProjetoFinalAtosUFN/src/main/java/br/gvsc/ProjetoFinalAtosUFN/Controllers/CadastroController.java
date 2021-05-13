@@ -30,7 +30,8 @@ public class CadastroController {
 		return cadastroRepository.findAll();
 	}	
 
-	@PostMapping("/cadastrar/{usuario}/{email}/{senha}")
+
+	@GetMapping("/cadastrar/{usuario}/{email}/{senha}")
 	@ResponseStatus(HttpStatus.CREATED)
 	public boolean getVerifica_user(@PathVariable String usuario, @PathVariable String email, @PathVariable String senha) {
 		Optional<CadastroModel> verifica_usuario = cadastroRepository.findByUsuario(usuario);     
