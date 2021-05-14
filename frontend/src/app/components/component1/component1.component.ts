@@ -1,8 +1,9 @@
+import { LIVE_ANNOUNCER_DEFAULT_OPTIONS } from '@angular/cdk/a11y';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { empty } from 'rxjs';
 import { Servico1Service } from 'src/app/services/servico1.service';
-import {Cadastro} from '../../models/cadastro.model';
+import { Cadastro } from '../../models/cadastro.model';
 
 @Component({
   selector: 'app-component1',
@@ -12,41 +13,45 @@ import {Cadastro} from '../../models/cadastro.model';
 export class Component1Component implements OnInit {
   router: any;
   cadastro: Cadastro[];
-  error:any;
-  senha:string;
-  email:string;
-  
+  error: any;
+  senha: string;
+  email: string;
+  leitura: boolean = false;
+  usuario: string;
 
-  constructor(private servico1:Servico1Service, router: Router) {
+
+  constructor(private servico1: Servico1Service, router: Router) {
     this.router = router;
-   }
+  }
 
   ngOnInit(): void {
   }
-
-  validaLogin(){
+  validaLogin() {
     this.servico1.getLogin().subscribe(
-      (data: Cadastro[]) =>{
+      (data: Cadastro[]) => {
         this.cadastro = data;
-
-        if(this.cadastro){
-          for(let aux of this.cadastro){
-            if((this.email == aux.email) && (this.senha == aux.senha)){
-             this.router.navigate(['/Home']);
-            }else{
-              alert("Usuário não cadastrado");
-              this.router.navigate(['/Cadastro']);
-              break;
+        console.log("Dados: ", this.cadastro)
+        if (this.cadastro) {
+          for (const aux of this.cadastro) {
+            console.log(aux.usuario);
+            console.log(aux.senha);
+            if ((this.usuario == aux.usuario) && (this.senha == aux.senha)) {
+              this.leitura = true;
+              /* this.router.navigate(['/Home']); */
             }
+          }
+          if (this.leitura == true) {
+            this.router.navigate(['/Home']);
+          } else {
+            alert("usuário não cadastrado");
+            this.router.navigate(['/Cadastro']);
           }
         }
       },
-      (error:any) =>  {
+      (error: any) => {
         this.error = error;
-        console.log("Erro: "  + this.error);
+        console.log("Erro: " + this.error);
       }
     )
   }
-
- 
 }

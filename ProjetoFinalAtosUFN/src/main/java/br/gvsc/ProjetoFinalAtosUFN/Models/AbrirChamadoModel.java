@@ -17,22 +17,64 @@ public class AbrirChamadoModel {
     @Column(name = "chamadoid")
     private Long id;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private String chamado;
     private String nome;
+    private String email;
     private Date data;
 
-    
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getChamado() {
+        return chamado;
+    }
+
+    public void setChamado(String chamado) {
+        this.chamado = chamado;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Date getData() {
+        return data;
+    }
+
+    public void setData(Date data) {
+        this.data = data;
+    }
+
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((chamado == null) ? 0 : chamado.hashCode());
         result = prime * result + ((data == null) ? 0 : data.hashCode());
+        result = prime * result + ((email == null) ? 0 : email.hashCode());
         result = prime * result + ((id == null) ? 0 : id.hashCode());
         result = prime * result + ((nome == null) ? 0 : nome.hashCode());
         return result;
     }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -52,6 +94,11 @@ public class AbrirChamadoModel {
                 return false;
         } else if (!data.equals(other.data))
             return false;
+        if (email == null) {
+            if (other.email != null)
+                return false;
+        } else if (!email.equals(other.email))
+            return false;
         if (id == null) {
             if (other.id != null)
                 return false;
@@ -64,29 +111,5 @@ public class AbrirChamadoModel {
             return false;
         return true;
     }
-    public Long getId() {
-        return id;
-    }
-    public void setId(Long id) {
-        this.id = id;
-    }
-    public String getChamado() {
-        return chamado;
-    }
-    public void setChamado(String chamado) {
-        this.chamado = chamado;
-    }
-    public String getNome() {
-        return nome;
-    }
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-    public Date getData() {
-        return data;
-    }
-    public void setData(Date data) {
-        this.data = data;
-    }
-     
+
 }

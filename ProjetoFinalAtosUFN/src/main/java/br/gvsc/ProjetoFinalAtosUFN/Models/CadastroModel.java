@@ -1,13 +1,10 @@
 package br.gvsc.ProjetoFinalAtosUFN.Models;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -27,9 +24,6 @@ public class CadastroModel {
 
 	@Column(nullable = false, name = "email")
 	private String email;
-	
-	@OneToOne(mappedBy = "usuario", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	private CadastroModel cadastroModel;
 
 	public Long getId() {
 		return id;
