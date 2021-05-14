@@ -1,0 +1,15 @@
+ <form class="sectionChamado">
+    <ul class="divChamado" *ngFor="let cha of chamado">
+      <li  >
+        <b>Nome: </b><p>{{ cha.nome }}</p>
+      </li>
+      <li  >
+        <b>Chamado:</b> <p>{{cha.chamado}}</p>
+      </li>
+    </ul>
+    <button pButton mat-raised-button type="button" label="Chamados" (click)="getter()" class="mat-elevation-z4"></button>
+    <button pButton mat-raised-button type="button" label="Abrir Chamado" class="example-label mat-elevation-z4"
+    routerLink="/Chamado"></button>
+    <button pButton mat-raised-button type="button" label="Sair" class="example-label mat-elevation-z4"
+    routerLink=""></button>
+    </form> 

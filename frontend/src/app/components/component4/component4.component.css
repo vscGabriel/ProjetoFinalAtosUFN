@@ -1,11 +1,11 @@
-
-.sectionHome{
+.sectionChamado{
     
     margin: 0 auto;
     height: 100%;
     width: 100%;
-    background-color:rgb(42, 42, 42);
-    color: rgb(165, 16, 165);
+   color: rgb(165, 16, 165);
+   background-color:rgb(42, 42, 42);
+
     border:2px solid black;
     align-items: center;
     display: flex;
@@ -14,25 +14,22 @@
     justify-content: center;
 
 }
-.divHome{
-    width: 50%;
+.divChamado{
+    width: 100%;
     font-size: 25px;
     font-size:25px;
     text-align: center;
     vertical-align: middle;  
 }
+b{ 
+    color: black;
+}
 
-.example-form {
-    min-width: 150px;
-    max-width: 500px;
-    
-  }
-  
-  .example {
-    width: 100%;
-  }
+p{ 
+    font-size: 20px;
+}
 
- .example-label {
+.example-label {
     display: table-cell;
     font-size: 14px;
     margin-left: 8px;

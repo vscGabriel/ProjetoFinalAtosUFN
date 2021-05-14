@@ -33,15 +33,15 @@ export class Component1Component implements OnInit {
         console.log("Dados: ", this.cadastro)
         if (this.cadastro) {
           for (const aux of this.cadastro) {
-            console.log(aux.usuario);
+            console.log(aux.email);
             console.log(aux.senha);
-            if ((this.usuario == aux.usuario) && (this.senha == aux.senha)) {
+            if ((this.email == aux.email) && (this.senha == aux.senha)) {
               this.leitura = true;
               /* this.router.navigate(['/Home']); */
             }
           }
           if (this.leitura == true) {
-            this.router.navigate(['/Home']);
+            this.router.navigate(['/Home/']);
           } else {
             alert("usuário não cadastrado");
             this.router.navigate(['/Cadastro']);

@@ -17,32 +17,32 @@ export class Component2Component implements OnInit {
   usuario: string;
   senha: string;
 
-  constructor(private servico1: Servico1Service, router: Router) { 
+  constructor(private servico1: Servico1Service, router: Router) {
     this.router = router
   }
 
   ngOnInit(): void {
   }
-  
-  adicionaUsuario(){
-    if(this.usuario == null || this.email == null || this.senha==null){
+
+  adicionaUsuario() {
+    if (this.usuario == null || this.email == null || this.senha == null) {
       this.cadastradoNoBanco = false
     }
-    else{
-      this.servico1.postUsuario(this.usuario,this.email,this.senha).subscribe(
-        (data: boolean) =>{
-          this.cadastradoNoBanco = data 
-          if(this.cadastradoNoBanco){
+    else {
+      this.servico1.postUsuario(this.usuario, this.email, this.senha).subscribe(
+        (data: boolean) => {
+          this.cadastradoNoBanco = data
+          if (this.cadastradoNoBanco) {
             alert("Cadastrado com sucesso");
             this.router.navigate([""]);
-          }         
+          }
         },
-        (error: any) =>{
+        (error: any) => {
           this.erro = error
           console.log("Erro >> " + this.erro)
         }
       )
-    }    
+    }
   }
 
 
