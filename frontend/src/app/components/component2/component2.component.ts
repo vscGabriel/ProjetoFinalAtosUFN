@@ -33,7 +33,7 @@ export class Component2Component implements OnInit {
         (data: boolean) =>{
           this.cadastradoNoBanco = data 
           if(this.cadastradoNoBanco){
-            this.router.navigate(['']);
+            this.router.navigate(['/Login']);
           }         
         },
         (error: any) =>{
