@@ -8,5 +8,5 @@
  Final project of Java Atos UFN class.
 
 # Abstract
- A system aplication of It suport for the internal invironment of a company.
- The back-end will be done with API's and the DB in Mysql. The front-end will be with Angular 9, Bootstrap, JS and PrimeFaces.
+A system application of IT support for the internal environment of a company.
+The back-end will be done with API's and the DB in Mysql. The front-end will be with Angular 9, Bootstrap, JS and PrimeFaces.
